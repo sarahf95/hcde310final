@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>{{page_title}}</title>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link href="/assets/app.css" rel="stylesheet">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+</head>
+<body>
+<div class="container">
+<h1>Things Below You</h1>
+<p>Explore your surroundings while flying over them! Enter your flight info below</p>
+
+<form action="results" method="post">
+
+<div class="input-group">
+    <label for="ll">Please enter the airline code</label>
+    <input type="text" class="form-control " id="airline" name="airline" placeholder="Airline Code"/>
+
+    </div>
+    <span><i>Find airline codes <a href='www.leonardsguide.com/us-airport-codes.shtml' target = '_blank'>here</a></i></span> 
+    
+    <div class="input-group">
+    <label for="ll">Please enter the flight number:</label>
+    <input type="text" class="form-control" id="flightNum" name="flightNum" placeholder="Flight Number" />
+    </div>
+    
+    <div class="input-group">
+    <label for="ll">Please enter the date (yyyy/mm/dd):</label>
+    <input type="text" class="form-control" id="date" name="date" placeholder="Date YYYY/MM/DD"/>
+    </div>
+    
+    <br>
+    <input type="submit" value="Go" name="gobtn"/> </form>
+    </div>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</div>
+</body>
+</html>
