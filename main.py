@@ -25,6 +25,7 @@ import urllib, urllib2, json
 # register for API key at https://foursquare.com/developers/register
 import client_id
 import client_secret
+<<<<<<< HEAD
 
 # register for API key at https://developer.flightstats.com/getting-started
 import appKey
@@ -82,8 +83,10 @@ def fourSquare(baseurl = 'https://api.foursquare.com/v2/venues/explore?',
 def flightPath(baseurl = 'https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/tracks/',
                  params={}
                  ):
+
     params['appId']=appId
     params['appKey']=appKey
+
     params['maxPositions']=2
     params['includeFlightPlan']='false'
     params['utc']='false'
